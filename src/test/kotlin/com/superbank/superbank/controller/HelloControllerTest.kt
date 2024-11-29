@@ -26,7 +26,7 @@ class HelloControllerTest {
         `when`(helloService.hello()).thenReturn("Hello World!")
 
         // Perform a GET request to the "/" endpoint and verify the response
-        mockMvc.perform(get("/"))
+        mockMvc.perform(get("/hello-world"))
             .andExpect(status().isOk)  // Check if the status is HTTP 200 OK
             .andExpect(content().string("Hello World!"))  // Check if the response body is "Hello World!"
     }

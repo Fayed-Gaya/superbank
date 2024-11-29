@@ -9,7 +9,7 @@ class HelloController(
     private val helloService: HelloService
 ) {
 
-    @GetMapping("/")
+    @GetMapping("/hello-world")
     fun home(): String {
         return helloService.hello()
     }
