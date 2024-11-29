@@ -41,10 +41,10 @@ tasks.withType<Test> {
 spotless {
 	java {
 		target("src/main/java/**/*.java", "src/test/java/**/*.java")
-		googleJavaFormat() // Apply Google's Java style format
+		googleJavaFormat()
 	}
 	kotlin {
 		target("src/main/kotlin/**/*.kt", "src/test/java/**/*.kt")
-		ktlint() // Use Ktlint to format Kotlin code
+		ktlint() //
 	}
 }
