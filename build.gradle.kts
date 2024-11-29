@@ -45,6 +45,10 @@ spotless {
 	}
 	kotlin {
 		target("src/main/kotlin/**/*.kt", "src/test/java/**/*.kt")
-		ktlint() //
+		ktlint()
 	}
+}
+
+tasks.named("build") {
+	dependsOn ("spotlessCheck")
 }
