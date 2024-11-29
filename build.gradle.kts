@@ -3,6 +3,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.25"
 	id("org.springframework.boot") version "3.4.0"
 	id("io.spring.dependency-management") version "1.1.6"
+	id("com.diffplug.spotless") version "6.12.0"
 }
 
 group = "com.superbank"
@@ -35,4 +36,15 @@ kotlin {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+spotless {
+	java {
+		target("src/main/java/**/*.java", "src/test/java/**/*.java")
+		googleJavaFormat() // Apply Google's Java style format
+	}
+	kotlin {
+		target("src/main/kotlin/**/*.kt", "src/test/java/**/*.kt")
+		ktlint() // Use Ktlint to format Kotlin code
+	}
 }
