@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Build the project
+./gradlew build
+
 # Build the Docker image
 docker build -t superbank .
 
