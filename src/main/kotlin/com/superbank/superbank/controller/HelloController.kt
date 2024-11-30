@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController
 class HelloController(
     private val helloService: HelloService
 ) {
-
-    // Test Mapping
     @GetMapping("/hello-world")
     fun home(): String {
         return helloService.hello()
