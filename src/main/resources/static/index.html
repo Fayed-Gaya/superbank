@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Superbank</title>
-    <style>
-        .superbank-text {
-            font-size: 18px;
-        }
-    </style>
-    <script>
-        function changeTextColor() {
-            const colors = ["red", "blue", "green", "purple", "orange"];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            const textElement = document.getElementById("welcome-text");
-            textElement.style.color = randomColor;
-        }
-    </script>
+4    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <h1>Superbank</h1>
     <p id="welcome-text" class="superbank-text">Welcome to Superbank!</p>
     <button onclick="changeTextColor()">Fun!</button>
+    <script src="/js/script.js"></script>
 </body>
 </html>
