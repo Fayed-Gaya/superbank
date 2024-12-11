@@ -21,9 +21,14 @@ spotless-job:
     - ./gradlew spotlessCheck
 
 deploy-staging-job:
-  image: "null"
   stage: deploy
   environment: staging
   script:
     - echo "Simulating deployment of application to staging..."
     - echo "Simulation of application deployment successful."
+
+cache:
+  key: gradle-cache
+  paths:
+    - .gradle/caches/
+    - .gradle/wrapper/
