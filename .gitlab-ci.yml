@@ -27,6 +27,18 @@ deploy-staging-job:
     - echo "Simulating deployment of application to staging..."
     - echo "Simulation of application deployment successful."
 
+deploy-production-job:
+  stage: deploy
+  environment:
+    name: production
+    url: https://superbank.com
+  script:
+    - echo "Simulating deployment of application to production..."
+    - echo "Simulation of application deployment successful."
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
+      when: manual
+
 cache:
   key: gradle-cache
   paths:
