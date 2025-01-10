@@ -27,6 +27,8 @@ deploy-staging-job:
   script:
     - echo "Simulating deployment of application to staging..."
     - echo "Simulation of application deployment successful."
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 
 deploy-production-job:
   stage: deploy
