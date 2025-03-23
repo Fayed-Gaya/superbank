@@ -1,4 +1,4 @@
-package com.superbank.superbank.service
+package com.superbank.backend.service
 
 import org.springframework.stereotype.Service
 

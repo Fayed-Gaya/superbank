@@ -1,6 +1,6 @@
-package com.superbank.superbank.controller
+package com.superbank.backend.controller
 
-import com.superbank.superbank.service.HelloService
+import com.superbank.backend.service.HelloService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 

@@ -1,6 +1,6 @@
-package com.superbank.superbank.controller
+package com.superbank.backend.controller
 
-import com.superbank.superbank.service.HelloService
+import com.superbank.backend.service.HelloService
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.`when`
 import org.springframework.beans.factory.annotation.Autowired
