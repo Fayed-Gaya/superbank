@@ -1,7 +1,13 @@
 #!/bin/bash
 
-# Build the project
-./gradlew build
+# Stop and remove the containers
+docker-compose down
 
-# Build the Docker images and start the containers using Docker Compose
+# Rebuild the project and containers
+./gradlew clean build
+
+# Start the containers fresh
 docker-compose up --build -d
+
+# Apply flyway migrations
+./gradlew flywayMigrate

@@ -8,8 +8,9 @@ services:
       POSTGRES_USER: temp
       POSTGRES_PASSWORD: temp
       POSTGRES_DB: superbank_db
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
+#    Removed to stop persisting data
+#    volumes:
+#      - postgres-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
 
@@ -29,8 +30,8 @@ services:
     networks:
       - superbank-net
 
-volumes:
-  postgres-data:
+#volumes:
+#  postgres-data:
 
 networks:
   superbank-net:
